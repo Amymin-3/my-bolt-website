@@ -1,0 +1,30 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="zh-TW"> {/* Set language to Traditional Chinese */}
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Father Huang Renovation - 30 years of experience in home repair, equipment maintenance, school facilities, and outdoor equipment." />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		{/* Basic SEO Keywords */}
+		<meta name="keywords" content="home repair, renovation, maintenance, plumbing, electrical, rolling doors, school facilities, outdoor equipment, Father Huang, 黃師傅, 裝修, 維修, 水電, 鐵捲門, 學校設施" />
+		<title>{title}</title>
+	</head>
+	<body class="bg-brand-bg text-brand-text font-sans">
+		<slot />
+	</body>
+</html>
+<style is:global>
+	/* Optional: Add any global styles here if needed, but prefer Tailwind utilities */
+	body {
+		scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+	}
+</style>

@@ -1,0 +1,23 @@
+---
+const advantages = [
+  { title: "30 Years Experience", description: "Decades of expertise ensuring professional and reliable service.", icon: "🏆" },
+  { title: "Professional Team", description: "Skilled technicians with a focus on quality workmanship and customer service.", icon: "👷" },
+  { title: "Diverse Services", description: "Comprehensive solutions for homes, equipment, schools, and outdoor needs.", icon: "🛠️" },
+  { title: "Quality Assurance", description: "We stand by the durability and reliability of our repairs.", icon: "✅" },
+  { title: "Reasonable Pricing", description: "Transparent and fair pricing for all our services.", icon: "💲" },
+];
+---
+<section id="advantages" class="py-16 bg-brand-beige">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12 text-brand-text">Why Choose Us?</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {advantages.map(advantage => (
+        <div class="text-center p-6 bg-white rounded-lg shadow-md">
+           <div class="text-4xl mb-4">{advantage.icon}</div>
+          <h3 class="text-xl font-semibold mb-2 text-brand-text">{advantage.title}</h3>
+          <p class="text-gray-700">{advantage.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
